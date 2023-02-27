@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    {% load static%}
+	<link rel="stylesheet" type="text/css" href="{% static 'contactUs2.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://stackpath.bootsrapcdn.com/font-awesome-/4.7.0/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+    
+</head>
+<body>
+
+<nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo">Love Charmers</label>
+    <ul>
+        <li><a class="active" href={% url 'welcomepage'%} "index.html">Home</a></li>
+       <li><a href={% url 'aboutus'%} "About.html">About</a></li>
+       <li><a href={% url 'feedback'%} "feedback.html">FeedBack</a></li>
+    </ul>
+    <br><br><br><br>
+
+    
+    <section>
+		<center><img src="{%static 'log05.png'%} "></center>
+			 <form action="" method="POST">
+				{% csrf_token %}
+			 <div class="Contact-box">
+					<div class="row">
+					<div class="form-group">
+						<label for="Full Name"><i class="fa-sharp fa-solid fa-user"></i> Full Name</label>
+						<input type="text" name="Fullname" id="FullName">
+					</div>
+                    <br>
+
+					<div class="form-group">
+						<label for="number"><i class="fa-sharp fa-solid fa-phone-square-alt"></i>Phone Number</label>
+						<input type="text" name="Number" id="number">
+					</div>
+<br>
+					<div class="form-group">
+						<label for="EmailName"><i class="fa-sharp fa-solid fa-envelope"></i> Email</label>
+						<input type="text" name="toemail" id="EmailName">
+					</div>
+<br>
+					<div class="form-group">
+						<label for="message">Message<i class="fa-sharp fa-solid fa-paper-plane"></i></label>
+						<textarea name="message" id="message" name="comments,&nbsp;questions" cols="30" rows="10"></textarea>
+					</div>
+					<button type="submit" class="btn">Submit</button>
+				</form>
+	</div>
+	</section>
+ </nav>
+</body>
+
+
+
+
+
+
+
+</html>

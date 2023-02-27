@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>About LoveCharm</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    {% load static%}
+    <link rel="stylesheet" href="{% static 'about2.css' %}">
+    
+</head>
+<body>
+<nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+    </label>
+    
+    <label class="logo">Love Charmers</label>
+    <ul>
+        <li><a class="active" href={% url 'welcomepage'%} "index.html">Home</a></li>
+       <li><a href={% url 'contactus'%} "ContactUs.html">Contact Us</a></li>
+       <li><a href={% url 'feedback'%} "feedback.html">FeedBack</a></li>
+    </ul>
+</nav>
+<br><br>
+<div class="heading">
+    <h1>About LoveCharm</h1>
+    <br>
+    <p>LoveCharm is an online dating site that helps young people between the ages 18 and 40 , find someone that they are 
+        compatible with.<br>
+        LoveCharm provide additional services such as its blog which host multiple love quotes available for user to charm suitable partners.<br>
+        Love Charmer helps single individuals to find a potential partner , by matching both single men and women with similar interest together to hopefully build a loving relationship.
+    </p>
+</div>
+<br>
+<section class="about-us">
+    <center><img src="{%static 'log03.png'%} "></center>
+    <div class="content">
+        <br>
+        <h2>How to go about using LoveCharm</h2>
+        <br>
+        <p>Before using LoveCharm to find your prefect Love Charmer there are certain things:
+            <br>
+            -You need ensure you have created an account if not , you'll need to create one.
+            <br>
+            -After having accesss to an account , you are known as an registed Love Charmer.
+            <br>
+            -By coming a Registered Love Charmer you can now login into you Love Charmer Account.
+            <br>
+            -Once you login to your Love Charmer account you will be able to view many different profiles of registerd Love Charmers.
+            <br>
+            -As soon as you are familar with LoveCharm's dating platform, you'll be able to engage with people of different ages , races and religions.
+            <br>
+            -Once you start interacting on this platform you most likely to come across your perfect match.
+            <br><br>
+            If a user decides to not register they are able to access a free user account which just allows them to browse through the available love quotes.       
+        </p>
+    </div>
+
+    <br><br>
+    <span id="dots">...</span>
+    <span id="more">Why LoveCharm...!!!<br><br>Love Charm allows to meet a varity of people between different ages, races and religions.<br>Despite the different backgrounds , LoveCharm believes that their belief system that true love is usually the most inconvenient kind , So no matter the diversity of Love Charmers won't affect your chances of finding happiness as there will be someone compatible to another.</span>
+        </p>
+        <button onclick="myfunction();"id="btn" class="read-more-btn">Read More</button>
+        <br><br><br>
+    </div>
+    <script>
+        function myfunction(){
+        var dots = document.getElementById("dots");
+        var more = document.getElementById("more");
+        var btn = document.getElementById("btn");
+        if (dots.style.display == "none")
+        {
+            dots.style.display ="inline";
+            more.style.display = "none";
+            btn.innerHTML = "Read More"; 
+        }else
+        {
+        dots.style.display = "none";
+        more.style.display = "inline";
+        btn.innerHTML = "Read Less";
+    }
+}
+
+
+        
+    </script>
+</section>
+</body>
+</html>

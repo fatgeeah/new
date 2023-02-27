@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    {% load static%}
+    <link rel="stylesheet" href="{% static 'feedback2.css'%}">
+    <link rel="stylesheet" href="file://E:/fontawesome/css/all.css">
+    
+</head>
+<body>
+<nav>
+    <button><a href={% url 'welcomepage'%} "index.html"class="button">Home</a></button>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+    </label>
+    
+    <label class="logo">Love Charmers</label>
+</nav>
+<br><br>
+
+<div class="rating">
+    <div class="star-rate">
+    <input type="radio" name="rate" id="rate-5" data-idx="0" hidden>
+    <label for="rate-5"></label>
+    <div class="star-rate">
+    <input type="radio" name="rate" id="rate-4" data-idx="1" hidden>
+    <label for="rate-4"></label>
+    <div class="star-rate">
+    <input type="radio" name="rate" id="rate-3" data-idx="2" hidden>
+    <label for="rate-3"></label>
+    <div class="star-rate">
+    <input type="radio" name="rate" id="rate-2" data-idx="3" hidden>
+    <label for="rate-2"></label>
+    <div class="star-rate">
+    <input type="radio" name="rate" id="rate-1" data-idx="4" hidden>
+    <label for="rate-1"></label>
+ </div>
+ </div>
+<br>
+
+<div class="form-container">
+    <form action="">
+        <h3>Give Your Feedback</h3>
+        <br>
+<label form="">First Name</label>
+<input type="text" placeholder="First Name" required>
+<label form="">Last Name</label>
+<input type="text" placeholder="Last Name" required>
+<label form="">E-mail address</label>
+<input type="email" placeholder="E-mail address" required>
+<label form="">Contact details</label>
+<input type="text" placeholder="Phone Number" required>
+<label form="">Your message</label>
+<textarea name="" id="" cols="20" rows="8" placeholder="Your Message"></textarea>
+<br>
+<input type="button" class="btn" value="submit">
+    </form>
+</div>
+</body>
+</html>

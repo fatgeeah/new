@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> LoveCharm Login</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    {% load static%}
+    <link rel="stylesheet" href="{% static 'login.css' %}">	
+</head>
+<body>
+      <div class="hero">
+        <video autoplay loop muted plays-inline class="back-video">
+            <source src="videos/Romantic flower background petals falling video.mp4" type="video/mp4">
+        </video>
+      </div>
+      <button><a href={% url 'welcomepage'%} "index.html"class="button">Home</a></button>
+    <div class="content">
+        <h1> Login to your LoveCharm Account</h1>
+        <br><br><br>
+
+        <div class="container">
+            <div class="form signup">
+                <h2>Love Charmer Login</h2><img src="data:image/png;base64,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">
+                <div class="inputBox">
+                    <input type="text" required="required">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA70lEQVR4nO3UQUrDQBSH8R8umqVdWrrWK+hJxEPYHsNuRPFAurR1ZfEAuinVlUUUXVYGJiCCdNJObCn54A8heeGbl8wbGjaUAn2M8BETrnvxWS10Mcb8j9zHmqwUC6Q/5Vk77ydIy5zmFN9VEA9zit8riENtNuYVs5aO37biH/fWtauLOKMpc9ySme4CeS0nV0krfsph3HAht/Fe9k4b/pUdHGGAGzzjK2aKa5zhMNauTAcXeKkwx2FR59hbRtjGFT6XOKfLhHcvsZsqPcDTCsLfecR+ivgho7TMOEU8rUE8SRGfYJZR+orjFHHDdvENyZP0ibBvoI8AAAAASUVORK5CYII=">
+                    <span>Username</span>
+                </div>
+        
+        <div class="inputBox">
+            <input type="password" required="required">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAxUlEQVR4nO2WPQrCQBCFv17FQvA6amdI60kEsRVyIMULeAP1DImFNimineBKYAQbdxOcRYt58Kp9Ox877B+Y/BoCGXAAbsAF2AFzoE8kzYAKcB98BqYxoA8BrIER0BGPgY2M3YFUs72VFF54ckvJlMBAA5y9rTSkrWRXGuCjFKvbG9JEsnsN8FWKdRtke5Kt53wtJ46V/z04BU6e89rWBZA0AReK0JfzNq3SdlAGdtZqbHNhxwm7QNxfPxKJMjyP8e010VRPzCeH3BXJpVoAAAAASUVORK5CYII=">
+            <span>Password</span>
+        </div>
+        <div class="inputBox">
+            <input type="submit" value="Login Account">
+        </div>
+        <p>Not a memeber yet? <a href = {% url 'signup'%} "signup.html" class="Login">Register</a></p>
+        
+    </div>  
+    </body>
+</html>
+ 

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ 
+    <head>
+        <meta charset="UTF-8">
+        <title> LoveCharm Dating Site</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+       {% load static%}
+        <link rel="stylesheet" href="{% static 'index3.css'%}">
+        <link rel="stylesheet" type="text/css" href="css/lightbox.min.css">
+		<script type="text/javascript" src="js/lightbox-plus-jquery.min.js"></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            
+            <label class="logo">Love Charm</label>
+            <ul>
+                <li><a class="active" href="#">Home</a></li>
+               <li><a href={% url 'aboutus'%} "About.html">About</a></li>
+               <li><a href={% url 'contactus'%} "ContactUs.html">Contact Us</a></li>
+               <li><a href={% url 'feedback'%} "feedback.html">FeedBack</a></li>
+            </ul>
+        </nav>
+        <section class="hero">
+            <div class="headers">
+                <h1>Welcome LoveCharmers</h1>
+                <br><br><br><br><br><br>
+                
+                <a href={% url 'login'%} "Login.html" class="btn1">LogIn</a></button>
+                <br>
+                <h2>Login to your account</h2> 
+                <br><br><br>             
+                 <a href={% url 'signup'%} "signup.html" class="btn2">Signup</a></button>
+                 <br>
+                 <h3>Create an Account</h3>
+                 <br><br><br>
+                 <a href={% url 'free'%} "free.html" class="btn3">Free Account</a></button>
+                 <br>
+                 <h2>Use without creating an account</h2>              
+                 <a href="static/logo.png" data-lightbox="LoveCharm Logo" data-title ="LoveCharm"><img align="right" src="static/log0.png"></a>
+                  
+                 
+               
+            </div>
+               
+        </section>
+    </body>
+</html>
+
